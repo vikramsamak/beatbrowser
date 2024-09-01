@@ -1,5 +1,6 @@
 import { AppShell } from "@mantine/core";
 import Header from "./components/Header";
+import MainView from "./components/MainView";
 
 function App() {
   return (
@@ -7,7 +8,9 @@ function App() {
       <AppShell.Header>
         <Header />
       </AppShell.Header>
-      <AppShell.Main>Main</AppShell.Main>
+      <AppShell.Main>
+        <MainView />
+      </AppShell.Main>
     </AppShell>
   );
 }
