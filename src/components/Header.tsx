@@ -1,5 +1,11 @@
+import { Container, Title } from "@mantine/core";
+
 function Header() {
-  return <div>Header</div>;
+  return (
+    <Container>
+      <Title order={1}>BeatBrowser</Title>
+    </Container>
+  );
 }
 
 export default Header;
