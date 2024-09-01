@@ -2,7 +2,7 @@ import { Container, Title } from "@mantine/core";
 
 function Header() {
   return (
-    <Container>
+    <Container fluid>
       <Title order={1}>BeatBrowser</Title>
     </Container>
   );
