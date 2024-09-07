@@ -11,7 +11,7 @@ function SongCards({ data, isFetching }: SongCardsProps) {
     <Grid>
       {data?.map((item) => (
         <Grid.Col
-          span={{ base: 12, md: 6, lg: 3 }}
+          span={{ base: 12, sm: 6, md: 4, lg: 3 }}
           style={{ height: "auto" }}
           key={item.id}
         >

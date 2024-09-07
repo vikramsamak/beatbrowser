@@ -25,8 +25,8 @@ function SongSearch({
   handleSearch,
 }: SongSearchProps) {
   return (
-    <Flex gap={"sm"}>
-      <Box style={{ width: "40%" }}>
+    <Flex gap={"sm"} direction={{ base: "column", sm: "row" }}>
+      <Box w={{ base: "100%" }}>
         <Select
           placeholder="Choose search type"
           value={searchType}
@@ -41,10 +41,10 @@ function SongSearch({
             { value: SEARCH_BY_SONG_TITLE_TYPE, label: "Search by Title" },
             { value: SEARCH_BY_ARTIST_TYPE, label: "Search by Artist" },
           ]}
-          style={{ width: "100%" }}
+          w={{ base: "100%" }}
         />
       </Box>
-      <Box style={{ width: "40%" }}>
+      <Box w={{ base: "100%" }}>
         <TextInput
           placeholder={`Enter ${
             searchType === SEARCH_BY_SONG_TITLE_TYPE
@@ -56,7 +56,7 @@ function SongSearch({
           style={{ width: "100%" }}
         />
       </Box>
-      <Box style={{ width: "20%" }}>
+      <Box w={{ base: "100%" }}>
         <Button style={{ width: "100%" }} onClick={handleSearch}>
           Search
         </Button>

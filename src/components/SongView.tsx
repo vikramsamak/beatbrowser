@@ -11,7 +11,13 @@ interface SongViewProps {
 
 function SongView({ data, error, isError, isFetching }: SongViewProps) {
   return (
-    <Box style={{ height: "80vh", borderRadius: "2px" }}>
+    <Box
+      h={{
+        base: "calc(100vh - 50px)",
+        sm: "calc(100vh - 80px)",
+        lg: "calc(100vh - 100px)",
+      }}
+    >
       {isError ? (
         <Flex style={{ height: "100%" }} justify={"center"} align={"center"}>
           <Text>{error?.message}</Text>
@@ -26,7 +32,7 @@ function SongView({ data, error, isError, isFetching }: SongViewProps) {
         </ScrollArea>
       ) : (
         <Flex style={{ height: "100%" }} justify={"center"} align={"center"}>
-          <Text>Search for song name or by artist</Text>
+          <Text>Search by song title or artist</Text>
         </Flex>
       )}
     </Box>
